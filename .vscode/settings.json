@@ -10,5 +10,6 @@
         "**/node_modules": true,
         "**/*.code-search": true,
         "**/dist": true
-    }
+    },
+    "editor.tabSize": 2
 }

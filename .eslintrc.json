@@ -1,0 +1,184 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "prettier"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": ["@typescript-eslint", "prettier"],
+    "rules": {
+        "@typescript-eslint/no-unsafe-assignment": ["off"],
+        "@typescript-eslint/no-unsafe-call": ["off"],
+        "@typescript-eslint/no-unsafe-member-access": ["off"],
+        "@typescript-eslint/no-unsafe-return": ["off"],
+        "@typescript-eslint/restrict-template-expressions": ["error"],
+        "@typescript-eslint/restrict-plus-operands": ["off"],
+        "indent": ["error", 2, { "SwitchCase": 1 }],
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"],
+        "no-unused-vars": "off",
+        "object-curly-spacing": ["error", "always"],
+        "getter-return": "error",
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "vars": "all",
+                "args": "none",
+                "ignoreRestSiblings": false
+            }
+        ],
+        "@typescript-eslint/no-explicit-any": [
+            "warn",
+            {
+                "fixToUnknown": false,
+                "ignoreRestArgs": true
+            }
+        ],
+        "@typescript-eslint/unbound-method": [
+            "error",
+            {
+                "ignoreStatic": true
+            }
+        ],
+        "@typescript-eslint/member-ordering": [
+            "error",
+            {
+                "default": [
+                    // Fields
+                    "public-static-field",
+                    "protected-static-field",
+                    "private-static-field",
+                    "public-instance-field",
+                    "protected-instance-field",
+                    "private-instance-field",
+                    "public-abstract-field",
+                    "protected-abstract-field",
+                    "private-abstract-field",
+                    // Constructors
+                    "public-constructor",
+                    "protected-constructor",
+                    "private-constructor",
+                    // Methods
+                    "public-static-method",
+                    "protected-static-method",
+                    "private-static-method",
+                    "public-instance-method",
+                    "protected-instance-method",
+                    "private-instance-method",
+                    "public-abstract-method",
+                    "protected-abstract-method",
+                    "private-abstract-method"
+                ]
+            }
+        ],
+        "@typescript-eslint/ban-ts-comment": ["error"],
+        "brace-style": "off",
+        "@typescript-eslint/brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+        "camelcase": "off",
+        "@typescript-eslint/explicit-member-accessibility": "off",
+        "func-call-spacing": "off",
+        "@typescript-eslint/func-call-spacing": ["error"],
+        "@typescript-eslint/member-delimiter-style": [
+            "error",
+            {
+                "multiline": {
+                    "delimiter": "semi",
+                    "requireLast": true
+                },
+                "singleline": {
+                    "delimiter": "semi",
+                    "requireLast": true
+                }
+            }
+        ],
+        "@typescript-eslint/no-inferrable-types": [
+            "error",
+            {
+                "ignoreParameters": false,
+                "ignoreProperties": false
+            }
+        ],
+        "@typescript-eslint/no-unnecessary-type-assertion": ["error", { "typesToIgnore": [] }],
+        "@typescript-eslint/type-annotation-spacing": [
+            "error",
+            {
+                "before": false,
+                "after": true,
+                "overrides": { "arrow": { "before": true, "after": true } }
+            }
+        ],
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                "selector": "default",
+                "format": ["camelCase"]
+            },
+            {
+                "selector": "class",
+                "format": ["PascalCase"]
+            },
+            {
+                "selector": "enum",
+                "format": ["PascalCase"]
+            },
+            {
+                "selector": "interface",
+                "format": ["PascalCase"]
+            },
+            {
+                "selector": "classProperty",
+                "modifiers": ["private"],
+                "leadingUnderscore": "require",
+                "format": ["camelCase"]
+            },
+            {
+                "selector": "parameterProperty",
+                "modifiers": ["private"],
+                "leadingUnderscore": "require",
+                "format": ["camelCase"]
+            },
+            {
+                "selector": "typeParameter",
+                "format": ["PascalCase"],
+                "prefix": ["T"]
+            }
+        ]
+    },
+    "overrides": [
+        {
+            // enable the rule specifically for TypeScript files
+            "files": ["*.ts", "*.tsx"],
+            "rules": {
+                "@typescript-eslint/explicit-function-return-type": ["error"],
+                "@typescript-eslint/explicit-member-accessibility": [
+                    "error",
+                    {
+                        "accessibility": "explicit",
+                        "overrides": {
+                            "accessors": "explicit",
+                            "constructors": "no-public",
+                            "methods": "explicit",
+                            "properties": "explicit",
+                            "parameterProperties": "explicit"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
