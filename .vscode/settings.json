@@ -1,0 +1,14 @@
+{
+    "eslint.lintTask.enable": true,
+    "eslint.packageManager": "pnpm",
+    "npm.packageManager": "pnpm",
+    "eslint.alwaysShowStatus": true,
+    "eslint.validate": [
+        "typescript"
+    ],
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/*.code-search": true,
+        "**/dist": true
+    }
+}

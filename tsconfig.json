@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "resolveJsonModule": true,
+        "strict": true,
+        "rootDir": "./src",
+        "outDir": "./dist"
+    },
+    "include": ["src/**/*"],
+    "exclude": ["tests/*"],
+}

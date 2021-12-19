@@ -1,0 +1,24 @@
+{
+  "name": "typescript-starter",
+  "version": "0.0.1",
+  "description": "eZ Typescript starter",
+  "scripts": {
+    "serve": "pnpm exec ts-node-dev ./src/index.ts",
+    "start": "pnpm exec ts-node ./src/index.ts"
+  },
+  "author": "Philipp Sonntag <sonntag.philipp@outlook.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.0",
+    "ts-jest": "^27.1.2",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.5.1"
+  }
+}
