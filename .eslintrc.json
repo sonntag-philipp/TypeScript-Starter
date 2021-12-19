@@ -28,7 +28,7 @@
         "@typescript-eslint/no-unsafe-return": ["off"],
         "@typescript-eslint/restrict-template-expressions": ["error"],
         "@typescript-eslint/restrict-plus-operands": ["off"],
-        "indent": ["error", 2, { "SwitchCase": 1 }],
+        "indent": ["error", 4, { "SwitchCase": 1 }],
         "quotes": ["error", "double"],
         "semi": ["error", "always"],
         "no-unused-vars": "off",
